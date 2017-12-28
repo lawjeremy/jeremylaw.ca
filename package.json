@@ -11,7 +11,8 @@
     "gatsby-plugin-sass": "^1.0.14",
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-remark": "^1.7.26",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-icons": "^2.2.7"
   },
   "keywords": [
     "gatsby"

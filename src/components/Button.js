@@ -8,7 +8,7 @@ class Button extends React.Component {
     const category = this.props.category;
 
     return (
-      <a href={this.props.href} className={styles.button}>Button, Yay!</a>
+      <a href={this.props.href} className={styles.button}>{this.props.text}</a>
     );
 
   }

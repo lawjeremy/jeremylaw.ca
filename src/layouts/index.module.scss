@@ -11,6 +11,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: lighter;
 }
 
+pre {
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;
+}
+
 .container {
   display: grid;
   grid-template-columns: 30% 70%;
@@ -71,7 +79,31 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   footer {
-    grid-area: footer;
     min-height: 50px;
+    padding: 10px;
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.blog-post-container {
+  max-width: 100%;
+}
+
+.blog-post {
+  max-width: 90%;
+  padding: 0 20px;
+}
+
+.blog-post-preview {
+
+  h1 {
+    
+    a {
+      text-decoration: none;
+      color: rgba(0,0,0,1);
+    }
   }
 }

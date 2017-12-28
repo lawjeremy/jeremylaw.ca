@@ -10,7 +10,7 @@ class Sidebar extends React.Component {
     return (
       <aside>
         <h2>Sidebar</h2>
-        <Button href="http://google.com" />
+        <Button href="http://google.com" text="Click Me" />
       </aside>
     );
 

@@ -10,9 +10,9 @@ class Header extends React.Component {
     return (
       <header>
         <nav>
-          <Link to="#">Link</Link>
-          <Link to="#">Link</Link>
-          <Link to="#">Link</Link>
+          <Link to="#">Web</Link>
+          <Link to="#">Game Dev</Link>
+          <Link to="#">Art</Link>
         </nav>
       </header>
     );

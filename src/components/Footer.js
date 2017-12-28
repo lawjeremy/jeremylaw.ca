@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import styles from "./button.module.scss";
+import SocialLink from "../components/SocialLink";
+import styles from "./footer.module.scss";
 
 class Footer extends React.Component {
 
@@ -9,7 +10,10 @@ class Footer extends React.Component {
 
     return (
       <footer>
-        <h2>Footer Component</h2>
+        <h2>&copy; Jeremy Law</h2>
+
+        <SocialLink />
+
       </footer>
     );
 
