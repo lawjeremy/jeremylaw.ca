@@ -4,7 +4,7 @@ import Twitter from 'react-icons/lib/fa/twitter';
 import Github from 'react-icons/lib/fa/github';
 import Linkedin from 'react-icons/lib/fa/linkedin';
 import Stackoverflow from 'react-icons/lib/fa/stack-overflow';
-import styles from "./socialLink.module.scss";
+import styles from "../scss/socialLink.module.scss";
 
 class SocialLink extends React.Component {
 

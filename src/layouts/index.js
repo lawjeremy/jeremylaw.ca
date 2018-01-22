@@ -2,8 +2,8 @@ import React from "react"
 import Button from "../components/Button"
 import Footer from "../components/Footer"
 import Sidebar from "../components/Sidebar"
-import Header from "../components/header"
-import styles from "./index.module.scss"
+import Header from "../components/Header"
+import styles from "../scss/index.module.scss"
 import logo from "../assets/dark_logo.png"
 
 export default ({ children }) => (
