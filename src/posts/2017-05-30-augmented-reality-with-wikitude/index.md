@@ -2,7 +2,8 @@
 path: "/2017/05/30/testing-the-google-vision-api"
 date: "2016-05-30T17:12:33.962Z"
 title: "Augmented Reality with Wikitude"
-published: true
+published: false
+headerImage: ""
 ---
 
 I was recently asked to build a prototype Augmented Reality (AR) app to test out some ideas we had for a client. I was using the Appcelerator platform and after some research I decided to use the Wikitude library for the AR functionality.

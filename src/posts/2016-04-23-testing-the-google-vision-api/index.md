@@ -2,7 +2,8 @@
 path: "/2016/04/23/testing-the-google-vision-api"
 date: "2016-04-23T17:12:33.962Z"
 title: "Testing the Google Vision API"
-published: false
+published: true
+headerImage: "https://s3.amazonaws.com/jeremylaw.ca/dan-gold-382057.jpg"
 ---
 
 Last month I found an interesting Google Cloud Platform [blog post](https://cloudplatform.googleblog.com/2016/02/Google-Cloud-Vision-API-enters-beta-open-to-all-to-try.html "Google Vision API"), announcing that the Cloud Vision API is entering a public beta phase.

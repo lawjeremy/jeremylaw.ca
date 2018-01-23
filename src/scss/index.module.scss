@@ -87,3 +87,30 @@ pre {
     align-items: center;
   }
 }
+
+.blog_post_container {
+  max-width: 100%;
+}
+
+.blog_post {
+  max-width: 90%;
+  padding: 0 20px;
+}
+
+.blog_post_preview {
+
+  h1 {
+    
+    a {
+      text-decoration: none;
+      color: rgba(0,0,0,1);
+    }
+  }
+}
+
+.blog_header_image {
+  background-image: url(../assets/emile-perron-190221.jpg);
+  background-size: cover;
+  height: 300px;
+  margin: 30px 0;
+}

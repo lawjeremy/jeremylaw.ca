@@ -3,42 +3,18 @@ import Link from 'gatsby-link'
 import Helmet from "react-helmet";
 import Button from "../components/Button";
 
-// class IndexPage extends React.Component {
-
-//   render() {
-    
-//     //const { edges: posts } = pageQuery.data.allMarkdownRemark;
-//     return <div></div>;
-//     return (
-//       <div className="blog-posts">
-//         {posts
-//           .filter(post => post.node.frontmatter.title.length > 0)
-//           .map(({ node: post }) => {
-//             return (
-//               <div className="blog-post-preview" key={post.id}>
-//                 <h1>
-//                   <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-//                 </h1>
-//                 <h2>{post.frontmatter.date}</h2>
-//                 <p>{post.excerpt}</p>
-//               </div>
-//             );
-//           })}
-//       </div>
-//     );
-
-//   }
-// }
+import styles from "../scss/index.module.scss";
 
 function IndexPage({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
   return (
-    <div className="blog-posts">
+    <div className={styles.blog_post}>
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
         .map(({ node: post }) => {
           return (
-            <div className="blog-post-preview" key={post.id}>
+            <div className={styles.blog_post_preview} key={post.id}>
+              <div className={styles.blog_header_image} style={{background: 'url(' + post.frontmatter.headerImage + ')', 'background-size': 'cover'}}></div>
               <h1>
                 <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
               </h1>
@@ -54,7 +30,7 @@ function IndexPage({ data }) {
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(filter: { frontmatter: { published: {ne: true}} }, sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(filter: { frontmatter: { published: {ne: false}} }, sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           excerpt(pruneLength: 250)
@@ -63,6 +39,7 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             path
+            headerImage
           }
         }
       }
