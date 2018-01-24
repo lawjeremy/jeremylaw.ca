@@ -13,10 +13,13 @@ export default ({ children }) => (
       <img src={logo} alt="Jeremy Law" />
       <h3>Web and Mobile App Developer, Nerd, Human</h3>
     </section>
+    
     <Sidebar/>
-    <content>
+
+    <section className={styles.content}>
       {children()}
-    </content>
+    </section>
+   
     <Footer/>
   </div>
 )

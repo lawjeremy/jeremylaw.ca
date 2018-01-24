@@ -21,16 +21,16 @@ pre {
 
 .container {
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
   grid-template-areas: 
-    "header header"
-    "hero hero"
-    "sidebar content"
-    "footer footer";
+    "hd hd hd hd hd hd hd hd hd hd hd hd"
+    "ho ho ho ho ho ho ho ho ho ho ho ho"
+    ". . as as ct ct ct ct ct ct . ."
+    "ft ft ft ft ft ft ft ft ft ft ft ft";
 
   header {
-    grid-area: header;
+    grid-area: hd;
   
     nav {
       display: flex;
@@ -44,13 +44,14 @@ pre {
         font-family: Arial, sans-serif;
         color: #2F2E2E;
         text-decoration: none;
+        text-transform: uppercase;
       }
     }
     
   }
 
   .hero {
-    grid-area: hero;
+    grid-area: ho;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,22 +67,23 @@ pre {
   }
 
   aside {
-    grid-area: sidebar;
+    grid-area: as;
     display: flex;
     align-items: center;
     flex-direction: column;
     min-height: 200px;
+    width: 100%;
   }
 
-  content {
-    grid-area: content;
-    min-height: 200px;
+  .content {
+    grid-area: ct;
+    
   }
 
+  
   footer {
-    min-height: 50px;
+    grid-area: ft;
     padding: 10px;
-    grid-area: footer;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -113,4 +115,35 @@ pre {
   background-size: cover;
   height: 300px;
   margin: 30px 0;
+}
+
+@media(max-width: 1024px){
+  .container {
+    grid-template-areas: 
+    "hd hd hd hd hd hd hd hd hd hd hd hd"
+    "ho ho ho ho ho ho ho ho ho ho ho ho"
+    ". as as as ct ct ct ct ct ct ct ."
+    "ft ft ft ft ft ft ft ft ft ft ft ft";
+  }
+}
+
+@media(max-width: 768px){
+  .container {
+    grid-template-areas: 
+    "hd hd hd hd hd hd hd hd hd hd hd hd"
+    "ho ho ho ho ho ho ho ho ho ho ho ho"
+    "as as as ct ct ct ct ct ct ct ct ct"
+    "ft ft ft ft ft ft ft ft ft ft ft ft";
+  }
+}
+
+@media(max-width: 550px){
+  .container {
+    grid-template-areas: 
+    "hd hd hd hd hd hd hd hd hd hd hd hd"
+    "ho ho ho ho ho ho ho ho ho ho ho ho"
+    "as as as as as as as as as as as as"
+    "ct ct ct ct ct ct ct ct ct ct ct ct"
+    "ft ft ft ft ft ft ft ft ft ft ft ft";
+  }
 }
