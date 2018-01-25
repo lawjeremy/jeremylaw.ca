@@ -12,7 +12,7 @@ class Header extends React.Component {
         <nav>
           <Link to="#">Web</Link>
           <Link to="#">Game Dev</Link>
-          <Link to="#">Art</Link>
+          {/* <Link to="#">Art</Link> */}
         </nav>
       </header>
     );

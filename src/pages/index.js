@@ -18,7 +18,7 @@ function IndexPage({ data }) {
               <h1>
                 <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
               </h1>
-              <h2>{post.frontmatter.date}</h2>
+              <h3>{post.frontmatter.date}</h3>
               <p>{post.excerpt}</p>
               <Button href={post.frontmatter.path} text="Read More" />
             </div>

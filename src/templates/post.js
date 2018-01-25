@@ -5,7 +5,7 @@ import Helmet from "react-helmet";
 import Button from "../components/Button";
 var ReactDisqusThread = require('react-disqus-thread');
 
-import styles from '../scss/post.scss'; // make it pretty!
+import styles from '../scss/post.module.scss'; // make it pretty!
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query we'll write in a bit
@@ -14,19 +14,19 @@ export default function Template({
   return (
     <div className={styles.blog_post_container}>
       <Helmet title={`Jeremy Law - ${post.frontmatter.title}`} />
-      <div className="blog_post">
+      <div className={styles.blog_post}>
         <h1>{post.frontmatter.title}</h1>
+        <h3>{post.frontmatter.date}</h3>
         <div
-          className="blog_post_content"
+          className={styles.blog_post_content}
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
         <ReactDisqusThread
-          shortname="example"
-          identifier="something-unique-12345"
-          title="Example Thread"
-          url="http://www.example.com/example-thread"
-          category_id="123456"
-          onNewComment={this.handleNewComment}/>
+          shortname="blogjeremylawca"
+          developer="true"
+          identifier={post.frontmatter.path}
+          title={post.frontmatter.title}
+          url={post.frontmatter.path}/>
       </div>
     </div>
   );

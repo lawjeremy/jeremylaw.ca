@@ -116,11 +116,17 @@ In this example I have requested LABEL_DETECTION on the image. It is possible to
 The available detection types are:
 
 FACE_DETECTION
+
 TEXT_DETECTION
+
 LANDMARK_DETECTION
+
 LABEL_DETECTION
+
 LOGO_DETECTION
+
 SAFE_SEARCH_DETECTION
+
 IMAGE_PROPERTIES
 
 Next, I go ahead and make the request
@@ -173,7 +179,7 @@ If I add any other types of detection, the results will be in different "typeAnn
 
 Now I am ready to build and run the app. I start it up and select and image from the gallery on my device. The app sends the request and produces the following output on screen:
 
-<img src="https://jeremylaw.ca/wp-content/uploads/2017/05/Screenshot_2016-03-22-22-11-14.png" style="width: 100%;" />
+<img src="https://jeremylaw.ca/wp-content/uploads/2017/05/Screenshot_2016-03-22-22-11-14.png" />
 
 As you can see, Vision has returned an accurate list of labels describing what is in the photo.
 

@@ -8,9 +8,11 @@ import logo from "../assets/dark_logo.png"
 
 export default ({ children }) => (
   <div className={styles.container}>
-    <Header/>
+   
     <section className={styles.hero}>
-      <img src={logo} alt="Jeremy Law" />
+      <a href="/">
+        <img src={logo} alt="Jeremy Law" />
+      </a>
       <h3>Web and Mobile App Developer, Nerd, Human</h3>
     </section>
     
