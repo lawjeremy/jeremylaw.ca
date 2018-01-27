@@ -14,20 +14,17 @@ export default function Template({
   return (
     <div className={styles.blog_post_container}>
       <Helmet title={`Jeremy Law - ${post.frontmatter.title}`} />
-      <div className={styles.blog_post}>
+      <article>
         <h1>{post.frontmatter.title}</h1>
         <h3>{post.frontmatter.date}</h3>
-        <div
-          className={styles.blog_post_content}
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <ReactDisqusThread
           shortname="blogjeremylawca"
           developer="true"
           identifier={post.frontmatter.path}
           title={post.frontmatter.title}
           url={post.frontmatter.path}/>
-      </div>
+      </article>
     </div>
   );
 }
