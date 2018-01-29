@@ -15,6 +15,7 @@ export default function Template({
     <div className={styles.blog_post_container}>
       <Helmet title={`Jeremy Law - ${post.frontmatter.title}`} />
       <article>
+        <div style={{background: 'url(' + post.frontmatter.headerImage.publicURL + ')', 'background-size': 'cover', 'height': '300px'}}></div>
         <h1>{post.frontmatter.title}</h1>
         <h3>{post.frontmatter.date}</h3>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -37,7 +38,9 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
-        headerImage
+        headerImage {
+          publicURL
+        }
       }
     }
   }

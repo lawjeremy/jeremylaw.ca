@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Link from "gatsby-link";
 import styles from "../scss/button.module.scss";
 
 class Button extends React.Component {
@@ -8,7 +9,7 @@ class Button extends React.Component {
     const category = this.props.category;
 
     return (
-      <a href={this.props.href} className={styles.button}>{this.props.text}</a>
+      <Link to={this.props.href} className={styles.button}>{this.props.text}</Link>
     );
 
   }

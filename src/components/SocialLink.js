@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Link from "gatsby-link"
+import Link from "gatsby-link";
 import Twitter from 'react-icons/lib/fa/twitter';
 import Github from 'react-icons/lib/fa/github';
 import Linkedin from 'react-icons/lib/fa/linkedin';
@@ -14,18 +14,18 @@ class SocialLink extends React.Component {
 
     return (
       <div className={styles.social}>
-        <a href="https://twitter.com/lawjeremy">
+        <Link to="https://twitter.com/lawjeremy">
           <Twitter color='black' size='20' />
-        </a>
-        <a href="https://github.com/lawjeremy">
+        </Link>
+        <Link to="https://github.com/lawjeremy">
           <Github color='black' size='20' />
-        </a>
-        <a href="https://ca.linkedin.com/in/lawjeremy">
+        </Link>
+        <Link to="https://ca.linkedin.com/in/lawjeremy">
           <Linkedin color='black' size='20' />
-        </a>
-        <a href="https://stackoverflow.com/users/362974/lawjeremy">
+        </Link>
+        <Link to="https://stackoverflow.com/users/362974/lawjeremy">
           <Stackoverflow color='black' size='20' />
-        </a>
+        </Link>
       </div>
     );
 
