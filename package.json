@@ -9,6 +9,7 @@
     "gatsby-plugin-catch-links": "^1.0.14",
     "gatsby-plugin-react-helmet": "^2.0.3",
     "gatsby-plugin-sass": "^1.0.14",
+    "gatsby-remark-prismjs": "^1.2.12",
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-remark": "^1.7.26",
     "react-disqus-thread": "^0.4.0",

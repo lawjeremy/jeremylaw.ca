@@ -5,6 +5,7 @@ import Sidebar from "../components/Sidebar"
 import Header from "../components/Header"
 import styles from "../scss/index.module.scss"
 import logo from "../assets/dark_logo.png"
+require("prismjs/themes/prism.css");
 
 export default ({ children }) => (
   <div className={styles.container}>

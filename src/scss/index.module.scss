@@ -15,14 +15,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: lighter;
 }
 
-pre {
-  white-space: pre-wrap;       /* Since CSS 2.1 */
-  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;      /* Opera 4-6 */
-  white-space: -o-pre-wrap;    /* Opera 7 */
-  word-wrap: break-word;
-}
-
 .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -83,7 +75,7 @@ pre {
 
   .content {
     grid-area: ct;
-    
+    overflow: auto;
   }
 
   footer {
