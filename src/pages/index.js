@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from "react-helmet";
 import Button from "../components/Button";
-import Img from "gatsby-image"
+import Img from "gatsby-image";
 
 import styles from "../scss/index.module.scss";
 
@@ -21,7 +21,7 @@ function IndexPage({ data }) {
               
               <Img 
                 sizes={ post.frontmatter.headerImage.childImageSharp.sizes } 
-
+                alt={post.frontmatter.title}
                 width="100%" />
               <h1>
                 <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>

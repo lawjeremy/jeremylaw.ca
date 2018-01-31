@@ -3,6 +3,8 @@
 import React from "react";
 import Helmet from "react-helmet";
 import Button from "../components/Button";
+import Img from "gatsby-image";
+
 var ReactDisqusThread = require('react-disqus-thread');
 
 import styles from '../scss/post.module.scss'; // make it pretty!
@@ -15,7 +17,10 @@ export default function Template({
     <div className={styles.blog_post_container}>
       <Helmet title={`Jeremy Law - ${post.frontmatter.title}`} />
       <article>
-        <div style={{background: 'url(' + post.frontmatter.headerImage.publicURL + ')', 'background-size': 'cover', 'height': '300px'}}></div>
+        <Img 
+          sizes={post.frontmatter.headerImage.childImageSharp.sizes} 
+          width="100%"
+          alt={post.frontmatter.title} />
         <h1>{post.frontmatter.title}</h1>
         <h3>{post.frontmatter.date}</h3>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -39,7 +44,11 @@ export const pageQuery = graphql`
         path
         title
         headerImage {
-          publicURL
+          childImageSharp {
+            sizes(maxWidth: 800) {
+              ...GatsbyImageSharpSizes
+            }
+          }
         }
       }
     }
