@@ -20,7 +20,7 @@ function IndexPage({ data }) {
             <div className={styles.blog_post_preview} key={post.id}>
               
               <Img 
-                sizes={ post.frontmatter.headerImage.childImageSharp.sizes } 
+                sizes={post.frontmatter.headerImage.childImageSharp.sizes} 
                 alt={post.frontmatter.title}
                 width="100%" />
               <h1>
@@ -50,6 +50,7 @@ export const pageQuery = graphql`
             headerImage {
               childImageSharp {
                 sizes(maxWidth: 800) {
+                  # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
                   ...GatsbyImageSharpSizes
                 }
               }

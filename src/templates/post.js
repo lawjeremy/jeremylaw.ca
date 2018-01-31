@@ -46,6 +46,7 @@ export const pageQuery = graphql`
         headerImage {
           childImageSharp {
             sizes(maxWidth: 800) {
+              # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
               ...GatsbyImageSharpSizes
             }
           }
