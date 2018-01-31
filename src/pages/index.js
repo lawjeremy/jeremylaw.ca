@@ -41,7 +41,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(filter: { frontmatter: { published: {ne: false}} }, sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
-          excerpt(pruneLength: 350)
+          excerpt(pruneLength: 500)
           id
           frontmatter {
             title
@@ -49,7 +49,7 @@ export const pageQuery = graphql`
             path
             headerImage {
               childImageSharp {
-                sizes(maxWidth: 800) {
+                sizes(maxWidth: 800, maxHeight: 430) {
                   # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
                   ...GatsbyImageSharpSizes
                 }

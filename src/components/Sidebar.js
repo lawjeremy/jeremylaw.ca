@@ -3,6 +3,8 @@ import Link from "gatsby-link";
 import Button from "./Button";
 import SocialLink from "./SocialLink";
 
+import styles from "../scss/sidebar.module.scss";
+
 class Sidebar extends React.Component {
 
   render() {
