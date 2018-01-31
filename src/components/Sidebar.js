@@ -11,8 +11,9 @@ class Sidebar extends React.Component {
 
     return (
       <aside>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ante lacus, dapibus vel eros a, lobortis facilisis dui. Suspendisse potenti.</p>
         <SocialLink />
-        <Link to="game-dev" />
+        <Link to="game-dev">Game Dev</Link>
       </aside>
     );
 

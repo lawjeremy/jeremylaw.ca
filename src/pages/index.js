@@ -18,8 +18,11 @@ function IndexPage({ data }) {
         .map(({ node: post }) => {
           return (
             <div className={styles.blog_post_preview} key={post.id}>
-              {/* <div className={styles.blog_header_image} style={{background: 'url(' +{ post.frontmatter.headerImage } + ')', 'background-size': 'cover'}}></div> */}
-              <img src={ post.frontmatter.headerImage.publicURL } style={{width: '100%'}} />
+              
+              <Img 
+                sizes={ post.frontmatter.headerImage.childImageSharp.sizes } 
+
+                width="100%" />
               <h1>
                 <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
               </h1>
@@ -45,7 +48,11 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             path
             headerImage {
-              publicURL
+              childImageSharp {
+                sizes(maxWidth: 800) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
             }
           }
         }
