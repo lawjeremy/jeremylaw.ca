@@ -7,9 +7,11 @@ article {
   padding: 0 20px;
 
   img {
-    display: block;
-    width: 80%;
-    margin: 20px auto;
+    &:not(.headerImage){
+      display: block;
+      width: 80%;
+      margin: 5px auto;
+    }
   }
 
   h1 {

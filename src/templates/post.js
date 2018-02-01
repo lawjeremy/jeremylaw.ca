@@ -20,6 +20,7 @@ export default function Template({
         <Img 
           sizes={post.frontmatter.headerImage.childImageSharp.sizes} 
           width="100%"
+          className="headerImage"
           alt={post.frontmatter.title} />
         <h1>{post.frontmatter.title}</h1>
         <h3>{post.frontmatter.date}</h3>
