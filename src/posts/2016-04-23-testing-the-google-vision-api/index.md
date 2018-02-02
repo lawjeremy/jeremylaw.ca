@@ -116,19 +116,19 @@ In this example I have requested LABEL_DETECTION on the image. It is possible to
 
 The available detection types are:
 
-FACE_DETECTION
+FACE\_DETECTION
 
-TEXT_DETECTION
+TEXT\_DETECTION
 
-LANDMARK_DETECTION
+LANDMARK\_DETECTION
 
-LABEL_DETECTION
+LABEL\_DETECTION
 
-LOGO_DETECTION
+LOGO\_DETECTION
 
-SAFE_SEARCH_DETECTION
+SAFE\_SEARCH\_DETECTION
 
-IMAGE_PROPERTIES
+IMAGE\_PROPERTIES
 
 Next, I go ahead and make the request
 
@@ -174,7 +174,7 @@ xhr.send(JSON.stringify(request));
 
 The onload handler takes the return data and checks to see if there are any "labelAnnotations" in it. If there are, it will concatenate them and display them on the screen.
 
-If I add any other types of detection, the results will be in different "typeAnnotations" objects.  Eg. "textAnnotations" for TEXT_DETECTION, "faceAnnotations" for FACE_DETECTION, and so on...
+If I add any other types of detection, the results will be in different "typeAnnotations" objects.  Eg. "textAnnotations" for TEXT\_DETECTION, "faceAnnotations" for FACE\_DETECTION, and so on...
 
 ## Results
 

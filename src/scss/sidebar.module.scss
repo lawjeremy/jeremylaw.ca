@@ -1,8 +1,42 @@
 aside {
 
+  section{
+    position: -webkit-sticky;  // required for Safari
+    position: sticky;
+    top: 0;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
   p {
-    padding: 0 10px;
-    text-align: justify;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    flex: 1;
+  }
+
+  div {
+    flex: 1;
+  }
+
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: left;
+    font-size: 1.2em;
+    padding: 5px 0;
+  }
+
+  a:hover {
+    color: rgb(89, 100, 83);
+  }
+
+  .sidebar_logo{
+    max-width: 80%;
   }
   
 }

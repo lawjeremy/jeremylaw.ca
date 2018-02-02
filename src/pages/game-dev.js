@@ -16,7 +16,7 @@ const GameDevPage = ({data}) => (
 
     <h2>How</h2>
 
-    <h2>Conclusion</h2>
+    <p>For more information or to download, check out <a href="https://whistlepig.info">whistlepig.info</a></p>
     
   </div>
 )

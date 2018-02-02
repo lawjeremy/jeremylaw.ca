@@ -3,12 +3,14 @@ import Link from "gatsby-link";
 import Button from "../components/Button";
 import Footer from "../components/Footer";
 import Sidebar from "../components/Sidebar";
+import SocialLink from "../components/SocialLink";
 import Header from "../components/Header";
 import styles from "../scss/index.module.scss";
 import logo from "../assets/dark_logo.png";
 require("prismjs/themes/prism.css");
 
 export default ({ children }) => (
+  
   <div className={styles.container}>
    
     <section className={styles.hero}>

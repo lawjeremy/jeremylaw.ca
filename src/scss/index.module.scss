@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: min-content;
   grid-template-areas: 
     "ho ho ho ho ho ho ho ho ho ho ho ho"
     ". . as as ct ct ct ct ct ct . ."
@@ -72,11 +72,16 @@ h1, h2, h3, h4, h5, h6 {
 
   aside {
     grid-area: as;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    min-height: 200px;
-    width: 100%;
+    
+
+    section {
+      height: auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+      flex-direction: column;
+      width: 100%;
+    }
   }
 
   .content {
