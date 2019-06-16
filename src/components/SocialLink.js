@@ -1,34 +1,29 @@
-import React, { Component } from "react";
-import Link from "gatsby-link";
-import Twitter from 'react-icons/lib/fa/twitter';
-import Github from 'react-icons/lib/fa/github';
-import Linkedin from 'react-icons/lib/fa/linkedin';
-import Stackoverflow from 'react-icons/lib/fa/stack-overflow';
-import styles from "../scss/socialLink.module.scss";
+import React from 'react';
+import Link from 'gatsby-link';
+import { FaTwitter } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
+import { FaStackOverflow } from 'react-icons/fa';
+import styles from '../scss/socialLink.module.scss';
 
 class SocialLink extends React.Component {
-
   render() {
-
-    const category = this.props.category;
-
     return (
       <div className={styles.social}>
         <Link to="https://twitter.com/lawjeremy">
-          <Twitter color='black' size='20' />
+          <FaTwitter color="black" size="20" />
         </Link>
         <Link to="https://github.com/lawjeremy">
-          <Github color='black' size='20' />
+          <FaGithub color="black" size="20" />
         </Link>
         <Link to="https://ca.linkedin.com/in/lawjeremy">
-          <Linkedin color='black' size='20' />
+          <FaLinkedin color="black" size="20" />
         </Link>
         <Link to="https://stackoverflow.com/users/362974/lawjeremy">
-          <Stackoverflow color='black' size='20' />
+          <FaStackOverflow color="black" size="20" />
         </Link>
       </div>
     );
-
   }
 }
 

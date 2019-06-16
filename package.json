@@ -4,22 +4,29 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "gatsby": "^1.9.17",
-    "gatsby-image": "^1.0.34",
-    "gatsby-link": "^1.6.15",
-    "gatsby-plugin-catch-links": "^1.0.14",
-    "gatsby-plugin-react-helmet": "^2.0.3",
-    "gatsby-plugin-sass": "^1.0.14",
-    "gatsby-plugin-sharp": "^1.6.27",
-    "gatsby-remark-copy-linked-files": "^1.5.25",
-    "gatsby-remark-images": "^1.5.41",
-    "gatsby-remark-prismjs": "^1.2.12",
-    "gatsby-source-filesystem": "^1.5.11",
-    "gatsby-transformer-remark": "^1.7.26",
-    "gatsby-transformer-sharp": "^1.6.17",
+    "babel-preset-gatsby": "^0.1.11",
+    "gatsby": "^2.9.4",
+    "gatsby-image": "^2.1.4",
+    "gatsby-link": "^2.1.1",
+    "gatsby-plugin-catch-links": "^2.0.15",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sass": "^2.0.11",
+    "gatsby-plugin-sharp": "^2.1.5",
+    "gatsby-remark-copy-linked-files": "^2.0.13",
+    "gatsby-remark-images": "^3.0.16",
+    "gatsby-remark-prismjs": "^3.2.11",
+    "gatsby-source-filesystem": "^2.0.39",
+    "gatsby-transformer-remark": "^2.4.0",
+    "gatsby-transformer-sharp": "^2.1.21",
+    "node-sass": "^4.12.0",
+    "prismjs": "^1.16.0",
+    "react": "^16.8.6",
     "react-disqus-thread": "^0.4.0",
-    "react-helmet": "^5.2.0",
-    "react-icons": "^2.2.7"
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "react-icons": "^3.7.0",
+    "styled-components": "^4.3.1",
+    "webpack": "^4.34.0"
   },
   "keywords": [
     "gatsby"
@@ -33,6 +40,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.6.1"
+    "prettier": "^1.18.2"
   }
 }

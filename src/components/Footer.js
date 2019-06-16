@@ -1,22 +1,14 @@
-import React, { Component } from "react";
-import SocialLink from "../components/SocialLink";
-import styles from "../scss/footer.module.scss";
-
+import React from 'react';
+import SocialLink from '../components/SocialLink';
 class Footer extends React.Component {
-
   render() {
-
-    const category = this.props.category;
-
     return (
       <footer>
-        <h2>&copy; Jeremy Law</h2>
+        <h2>&copy; {new Date().getFullYear()} Jeremy Law</h2>
 
         <SocialLink />
-
       </footer>
     );
-
   }
 }
 

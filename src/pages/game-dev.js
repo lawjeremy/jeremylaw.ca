@@ -1,13 +1,11 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 // import headerImage from "../assets/whistle-pig-screen.jpg";
 
-const GameDevPage = ({data}) => (
-
+const GameDevPage = ({ data }) => (
   <div>
-
     <Img sizes={data.file.childImageSharp.sizes} />
     {/* <img src={headerImage} /> */}
     <h1>Game Dev</h1>
@@ -16,10 +14,12 @@ const GameDevPage = ({data}) => (
 
     <h2>How</h2>
 
-    <p>For more information or to download, check out <a href="https://whistlepig.info">whistlepig.info</a></p>
-    
+    <p>
+      For more information or to download, check out{' '}
+      <a href="https://whistlepig.info">whistlepig.info</a>
+    </p>
   </div>
-)
+);
 
 export const query = graphql`
   query GatsbyImageSampleQuery {
@@ -34,4 +34,4 @@ export const query = graphql`
   }
 `;
 
-export default GameDevPage
+export default GameDevPage;

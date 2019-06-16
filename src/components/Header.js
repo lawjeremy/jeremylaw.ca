@@ -1,12 +1,8 @@
-import React, { Component } from "react";
-import Link from "gatsby-link"
+import React from 'react';
+import Link from 'gatsby-link';
 
 class Header extends React.Component {
-
   render() {
-
-    const category = this.props.category;
-
     return (
       <header>
         <nav>
@@ -16,7 +12,6 @@ class Header extends React.Component {
         </nav>
       </header>
     );
-
   }
 }
 

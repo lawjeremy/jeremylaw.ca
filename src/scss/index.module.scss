@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-rows: min-content;
   grid-template-areas: 
     "ho ho ho ho ho ho ho ho ho ho ho ho"
-    ". . as as ct ct ct ct ct ct . ."
+    ". . ct ct ct ct ct ct ct ct . ."
     "ft ft ft ft ft ft ft ft ft ft ft ft";
 
   header {
@@ -132,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
   .container {
     grid-template-areas: 
     "ho ho ho ho ho ho ho ho ho ho ho ho"
-    ". as as as ct ct ct ct ct ct ct ."
+    ". ct ct ct ct ct ct ct ct ct ct ."
     "ft ft ft ft ft ft ft ft ft ft ft ft";
   }
 }
@@ -141,7 +141,7 @@ h1, h2, h3, h4, h5, h6 {
   .container {
     grid-template-areas: 
     "ho ho ho ho ho ho ho ho ho ho ho ho"
-    "as as as ct ct ct ct ct ct ct ct ct"
+    "ct ct ct ct ct ct ct ct ct ct ct ct"
     "ft ft ft ft ft ft ft ft ft ft ft ft";
   }
 }
