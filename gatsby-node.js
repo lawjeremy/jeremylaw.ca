@@ -1,48 +1,6 @@
 const path = require('path');
-
-// exports.createPages = ({ actions, graphql }) => {
-//   const { createPage } = actions;
-
-//   const blogPostTemplate = path.resolve(`src/templates/post.js`);
-
-//   return graphql(`
-//     {
-//       allMarkdownRemark(
-//         sort: { order: DESC, fields: [frontmatter___date] }
-//         limit: 1000
-//       ) {
-//         edges {
-//           node {
-//             excerpt(pruneLength: 250)
-//             html
-//             id
-//             frontmatter {
-//               date
-//               path
-//               title
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `).then(result => {
-//     if (result.errors) {
-//       console.log(result.errors);
-//       return Promise.reject(result.errors);
-//     }
-
-//     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-//       console.log(node);
-//       createPage({
-//         path: node.frontmatter.path,
-//         component: blogPostTemplate,
-//         context: {}, // additional data can be passed via context
-//       });
-//     });
-//   });
-// };
-
 const { createFilePath } = require(`gatsby-source-filesystem`);
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
@@ -73,13 +31,6 @@ exports.createPages = ({ graphql, actions }) => {
               date
               path
               title
-              headerImage {
-                childImageSharp {
-                  fluid {
-                    sizes
-                  }
-                }
-              }
             }
             fields {
               slug
@@ -89,8 +40,8 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then(result => {
+    console.log(result.data);
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      console.log('slug', node.fields);
       createPage({
         path: node.fields.slug,
         component: path.resolve(`./src/templates/post.js`),

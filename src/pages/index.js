@@ -26,12 +26,14 @@ const IndexPage = () => {
                   path
                   headerImage {
                     childImageSharp {
-                      sizes(maxWidth: 800, maxHeight: 430) {
-                        # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-                        ...GatsbyImageSharpSizes
+                      fluid {
+                        ...GatsbyImageSharpFluid
                       }
                     }
                   }
+                }
+                fields {
+                  slug
                 }
               }
             }
@@ -47,23 +49,24 @@ const IndexPage = () => {
               {posts
                 .filter(post => post.node.frontmatter.title.length > 0)
                 .map(({ node: post }) => {
+                  console.log(post);
                   return (
                     <div className={styles.blog_post_preview} key={post.id}>
                       <Img
-                        sizes={
-                          post.frontmatter.headerImage.childImageSharp.sizes
+                        fluid={
+                          post.frontmatter.headerImage.childImageSharp.fluid
                         }
                         alt={post.frontmatter.title}
                         width="100%"
                       />
                       <h1>
-                        <Link to={post.frontmatter.path}>
+                        <Link to={post.fields.slug}>
                           {post.frontmatter.title}
                         </Link>
                       </h1>
                       <h3>{post.frontmatter.date}</h3>
                       <p>{post.excerpt}</p>
-                      <Button href={post.frontmatter.path} text="Read More" />
+                      <Button href={post.fields.slug} text="Read More" />
                     </div>
                   );
                 })}

@@ -59,14 +59,14 @@ const Article = styled.article`
 
 export default ({ data }) => {
   const { markdownRemark: post } = data;
-  console.log('frontMatter', post.frontmatter);
+
   return (
     <Layout>
       <Container>
         <Helmet title={`Jeremy Law - ${post.frontmatter.title}`} />
         <Article>
           <Img
-            sizes={post.frontmatter.headerImage.childImageSharp.fluid.sizes}
+            fluid={post.frontmatter.headerImage.childImageSharp.fluid}
             width="100%"
             className="headerImage"
             alt={post.frontmatter.title}
@@ -87,10 +87,9 @@ export const query = graphql`
       frontmatter {
         title
         headerImage {
-          absolutePath
           childImageSharp {
             fluid {
-              sizes
+              ...GatsbyImageSharpFluid
             }
           }
         }

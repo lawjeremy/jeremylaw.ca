@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import SocialLink from './SocialLink';
+import Link from 'gatsby-link';
 
-const Sidebar = () => {
+export default () => {
   return (
     <aside>
       <section>
@@ -10,16 +11,15 @@ const Sidebar = () => {
           iOS.
         </p>
 
-        {/* <nav>
-            <Link to="/">Blog</Link>
-            <Link to="/web-dev">Web</Link>
-            <Link to="/game-dev">Games</Link>
-          </nav> */}
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/web-dev">Web</Link>
+          <Link to="/adventure">Adventure</Link>
+          {/* <Link to="/game-dev">Games</Link> */}
+        </nav>
 
         <SocialLink />
       </section>
     </aside>
   );
 };
-
-export default Sidebar;
