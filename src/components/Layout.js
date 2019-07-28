@@ -5,7 +5,7 @@ import styles from '../scss/index.module.scss';
 import logo from '../assets/dark_logo.png';
 require('prismjs/themes/prism.css');
 
-export default ({ children }) => (
+const Layout = ({ children }) => (
   <div className={styles.container}>
     <section className={styles.hero}>
       <Link to="/">
@@ -21,3 +21,5 @@ export default ({ children }) => (
     <Footer />
   </div>
 );
+
+export default Layout;

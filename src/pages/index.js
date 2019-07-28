@@ -7,9 +7,7 @@ import Layout from '../components/Layout';
 
 import styles from '../scss/index.module.scss';
 
-function IndexPage({ data }) {
-  const { edges: posts } = data.allMarkdownRemark;
-
+const IndexPage = () => {
   return (
     <StaticQuery
       query={graphql`
@@ -40,35 +38,41 @@ function IndexPage({ data }) {
           }
         }
       `}
-      render={data => (
-        <Layout>
-          <div className={styles.blog_post}>
-            {posts
-              .filter(post => post.node.frontmatter.title.length > 0)
-              .map(({ node: post }) => {
-                return (
-                  <div className={styles.blog_post_preview} key={post.id}>
-                    <Img
-                      sizes={post.frontmatter.headerImage.childImageSharp.sizes}
-                      alt={post.frontmatter.title}
-                      width="100%"
-                    />
-                    <h1>
-                      <Link to={post.frontmatter.path}>
-                        {post.frontmatter.title}
-                      </Link>
-                    </h1>
-                    <h3>{post.frontmatter.date}</h3>
-                    <p>{post.excerpt}</p>
-                    <Button href={post.frontmatter.path} text="Read More" />
-                  </div>
-                );
-              })}
-          </div>
-        </Layout>
-      )}
+      render={data => {
+        const { edges: posts } = data.allMarkdownRemark;
+
+        return (
+          <Layout>
+            <div className={styles.blog_post}>
+              {posts
+                .filter(post => post.node.frontmatter.title.length > 0)
+                .map(({ node: post }) => {
+                  return (
+                    <div className={styles.blog_post_preview} key={post.id}>
+                      <Img
+                        sizes={
+                          post.frontmatter.headerImage.childImageSharp.sizes
+                        }
+                        alt={post.frontmatter.title}
+                        width="100%"
+                      />
+                      <h1>
+                        <Link to={post.frontmatter.path}>
+                          {post.frontmatter.title}
+                        </Link>
+                      </h1>
+                      <h3>{post.frontmatter.date}</h3>
+                      <p>{post.excerpt}</p>
+                      <Button href={post.frontmatter.path} text="Read More" />
+                    </div>
+                  );
+                })}
+            </div>
+          </Layout>
+        );
+      }}
     />
   );
-}
+};
 
 export default IndexPage;

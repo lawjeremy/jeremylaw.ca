@@ -1,9 +1,11 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import { FaTwitter } from 'react-icons/fa';
-import { FaGithub } from 'react-icons/fa';
-import { FaLinkedin } from 'react-icons/fa';
-import { FaStackOverflow } from 'react-icons/fa';
+import {
+  FaTwitter,
+  FaGithub,
+  FaLinkedin,
+  FaStackOverflow,
+} from 'react-icons/fa';
 import styles from '../scss/socialLink.module.scss';
 
 class SocialLink extends React.Component {
