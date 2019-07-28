@@ -11,7 +11,7 @@ const ButtonSc = styled.button`
 `;
 
 const Button = ({ href, text }) => {
-  return <Link to={href}>{text}</Link>;
+  return <a to={href}>{text}</a>;
 };
 
 export default Button;

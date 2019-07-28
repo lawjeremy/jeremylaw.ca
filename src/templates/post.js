@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import Helmet from 'react-helmet';
 import Img from 'gatsby-image';
@@ -56,16 +57,16 @@ const Article = styled.article`
   }
 `;
 
-const Template = props => {
-  console.log('Template', props);
-  const { markdownRemark: post } = props;
+export default ({ data }) => {
+  const { markdownRemark: post } = data;
+  console.log('frontMatter', post.frontmatter);
   return (
     <Layout>
       <Container>
         <Helmet title={`Jeremy Law - ${post.frontmatter.title}`} />
         <Article>
           <Img
-            sizes={post.frontmatter.headerImage.childImageSharp.sizes}
+            sizes={post.frontmatter.headerImage.childImageSharp.fluid.sizes}
             width="100%"
             className="headerImage"
             alt={post.frontmatter.title}
@@ -79,4 +80,21 @@ const Template = props => {
   );
 };
 
-export default Template;
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+        headerImage {
+          absolutePath
+          childImageSharp {
+            fluid {
+              sizes
+            }
+          }
+        }
+      }
+    }
+  }
+`;
