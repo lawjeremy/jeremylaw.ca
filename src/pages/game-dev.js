@@ -1,11 +1,12 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import Layout from '../components/layout';
 
 // import headerImage from "../assets/whistle-pig-screen.jpg";
 
 const GameDevPage = ({ data }) => (
-  <div>
+  <Layout>
     <Img sizes={data.file.childImageSharp.sizes} />
     {/* <img src={headerImage} /> */}
     <h1>Game Dev</h1>
@@ -18,7 +19,7 @@ const GameDevPage = ({ data }) => (
       For more information or to download, check out{' '}
       <a href="https://whistlepig.info">whistlepig.info</a>
     </p>
-  </div>
+  </Layout>
 );
 
 export const query = graphql`

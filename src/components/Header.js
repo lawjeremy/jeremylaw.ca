@@ -1,16 +1,16 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import Button from './Button';
 
-const Header = () => {
+export default () => {
   return (
     <header>
       <nav>
-        <Link to="#">Web</Link>
-        <Link to="#">Game Dev</Link>
-        {/* <Link to="#">Art</Link> */}
+        <Button href="/" text="Home" />
+        <Button href="/web-dev" text="Web" />
+        <Button href="/game-dev" text="Game Dev" />
+        <Button href="/adventure" text="Adventure" />
+        <Button href="/art" text="Art" />
       </nav>
     </header>
   );
 };
-
-export default Header;
