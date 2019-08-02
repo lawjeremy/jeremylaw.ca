@@ -49,7 +49,6 @@ const IndexPage = () => {
               {posts
                 .filter(post => post.node.frontmatter.title.length > 0)
                 .map(({ node: post }) => {
-                  console.log(post);
                   return (
                     <div className={styles.blog_post_preview} key={post.id}>
                       <Img

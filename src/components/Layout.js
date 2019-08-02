@@ -14,7 +14,7 @@ const Layout = ({ children }) => (
         <img src={logo} alt="Jeremy Law" />
       </Link>
       <h3>Software Developer, Nerd, Human</h3>
-      <Header />
+      {/* <Header /> */}
     </section>
 
     {/* <Sidebar /> */}
