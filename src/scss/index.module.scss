@@ -11,7 +11,12 @@ body {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: lighter;
 }
 
@@ -19,32 +24,21 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: min-content;
-  grid-template-areas: 
-    "ho ho ho ho ho ho ho ho ho ho ho ho"
-    ". . ct ct ct ct ct ct ct ct . ."
-    "ft ft ft ft ft ft ft ft ft ft ft ft";
+  grid-template-areas:
+    'ho ho ho ho ho ho ho ho ho ho ho ho'
+    '. . ct ct ct ct ct ct ct ct . .'
+    'ft ft ft ft ft ft ft ft ft ft ft ft';
 
   header {
-
     grid-area: hd;
-  
+
     nav {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       min-height: 50px;
-      background: #D3DBCF;
-      
-      a {
-        font-family: Roboto, sans-serif;
-        width: 10%;
-        color: #2F2E2E;
-        text-decoration: none;
-        text-transform: uppercase;
-      }
     }
-    
   }
 
   .hero {
@@ -72,7 +66,6 @@ h1, h2, h3, h4, h5, h6 {
 
   aside {
     grid-area: as;
-    
 
     section {
       height: auto;
@@ -109,14 +102,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .blog_post_preview {
-
   margin-bottom: 30px;
 
   h1 {
-    
     a {
       text-decoration: none;
-      color: rgba(0,0,0,1);
+      color: rgba(0, 0, 0, 1);
     }
   }
 }
@@ -128,30 +119,30 @@ h1, h2, h3, h4, h5, h6 {
   margin: 30px 0;
 }
 
-@media(max-width: 1024px){
+@media (max-width: 1024px) {
   .container {
-    grid-template-areas: 
-    "ho ho ho ho ho ho ho ho ho ho ho ho"
-    ". ct ct ct ct ct ct ct ct ct ct ."
-    "ft ft ft ft ft ft ft ft ft ft ft ft";
+    grid-template-areas:
+      'ho ho ho ho ho ho ho ho ho ho ho ho'
+      '. ct ct ct ct ct ct ct ct ct ct .'
+      'ft ft ft ft ft ft ft ft ft ft ft ft';
   }
 }
 
-@media(max-width: 768px){
+@media (max-width: 768px) {
   .container {
-    grid-template-areas: 
-    "ho ho ho ho ho ho ho ho ho ho ho ho"
-    "ct ct ct ct ct ct ct ct ct ct ct ct"
-    "ft ft ft ft ft ft ft ft ft ft ft ft";
+    grid-template-areas:
+      'ho ho ho ho ho ho ho ho ho ho ho ho'
+      'ct ct ct ct ct ct ct ct ct ct ct ct'
+      'ft ft ft ft ft ft ft ft ft ft ft ft';
   }
 }
 
-@media(max-width: 550px){
+@media (max-width: 550px) {
   .container {
-    grid-template-areas: 
-    "ho ho ho ho ho ho ho ho ho ho ho ho"
-    "as as as as as as as as as as as as"
-    "ct ct ct ct ct ct ct ct ct ct ct ct"
-    "ft ft ft ft ft ft ft ft ft ft ft ft";
+    grid-template-areas:
+      'ho ho ho ho ho ho ho ho ho ho ho ho'
+      'as as as as as as as as as as as as'
+      'ct ct ct ct ct ct ct ct ct ct ct ct'
+      'ft ft ft ft ft ft ft ft ft ft ft ft';
   }
 }

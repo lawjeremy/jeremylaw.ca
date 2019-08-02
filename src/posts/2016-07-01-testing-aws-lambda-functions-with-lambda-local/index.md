@@ -3,7 +3,7 @@ path: '/2016/07/01/testing-the-google-vision-api'
 date: '2016-07-01T17:12:33.962Z'
 title: 'Testing AWS lambda functions locally with lambda-local and ExpressJS'
 published: true
-headerImage: ../../assets/dan-gold-382057.jpg
+headerImage: ../../assets/emile-perron-190221.jpg
 ---
 
 The last several projects I have worked on have involved AWS Lambda. I have found Lambda to be a great service for running small chunks of code that are self contained.

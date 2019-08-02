@@ -1,18 +1,16 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import Button from './Button';
 
-class Header extends React.Component {
-  render() {
-    return (
-      <header>
-        <nav>
-          <Link to="#">Web</Link>
-          <Link to="#">Game Dev</Link>
-          {/* <Link to="#">Art</Link> */}
-        </nav>
-      </header>
-    );
-  }
-}
-
-export default Header;
+export default () => {
+  return (
+    <header>
+      <nav>
+        <Button href="/" text="Home" />
+        <Button href="/web-dev" text="Web" />
+        <Button href="/game-dev" text="Game Dev" />
+        <Button href="/adventure" text="Adventure" />
+        <Button href="/art" text="Art" />
+      </nav>
+    </header>
+  );
+};
