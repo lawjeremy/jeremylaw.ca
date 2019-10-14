@@ -4,6 +4,7 @@ import {
   FaGithub,
   FaLinkedin,
   FaStackOverflow,
+  FaDev,
 } from 'react-icons/fa';
 import styles from '../scss/socialLink.module.scss';
 
@@ -11,6 +12,9 @@ class SocialLink extends React.Component {
   render() {
     return (
       <div className={styles.social}>
+        <a href="https://dev.to/lawjeremy">
+          <FaDev color="black" size="20" />
+        </a>
         <a href="https://twitter.com/LawJeremy">
           <FaTwitter color="black" size="20" />
         </a>

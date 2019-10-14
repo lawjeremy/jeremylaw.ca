@@ -40,7 +40,6 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then(result => {
-    console.log(result.data);
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.fields.slug,

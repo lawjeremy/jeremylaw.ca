@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
 // import headerImage from "../assets/whistle-pig-screen.jpg";
 

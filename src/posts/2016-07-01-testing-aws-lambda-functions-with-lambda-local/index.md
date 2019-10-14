@@ -2,7 +2,7 @@
 path: '/2016/07/01/testing-the-google-vision-api'
 date: '2016-07-01T17:12:33.962Z'
 title: 'Testing AWS lambda functions locally with lambda-local and ExpressJS'
-published: true
+published: false
 headerImage: ../../assets/emile-perron-190221.jpg
 ---
 
